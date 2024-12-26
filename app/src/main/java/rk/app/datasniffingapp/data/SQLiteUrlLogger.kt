@@ -1,8 +1,7 @@
-package rk.app.datasniffingapp.data.logger
+package rk.app.datasniffingapp.data
 
 import android.database.sqlite.SQLiteDatabase
 import de.robv.android.xposed.XposedBridge
-import rk.app.datasniffingapp.domain.logger.UrlLogger
 import java.io.File
 
 /**

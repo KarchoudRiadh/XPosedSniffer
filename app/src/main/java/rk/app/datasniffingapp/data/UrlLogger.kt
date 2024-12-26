@@ -1,4 +1,4 @@
-package rk.app.datasniffingapp.domain.logger
+package rk.app.datasniffingapp.data
 
 /**
  * Interface for logging URLs.

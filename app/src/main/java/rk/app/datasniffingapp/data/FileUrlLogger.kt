@@ -1,7 +1,6 @@
-package rk.app.datasniffingapp.data.logger
+package rk.app.datasniffingapp.data
 
 import de.robv.android.xposed.XposedBridge
-import rk.app.datasniffingapp.domain.logger.UrlLogger
 import rk.app.datasniffingapp.utils.getCurrentTimestamp
 import java.io.File
 import java.io.FileWriter

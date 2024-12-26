@@ -1,8 +1,6 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
-    //id("kotlin-kapt")
-    //id("dagger.hilt.android.plugin")
 }
 
 android {
@@ -39,6 +37,8 @@ android {
 
 dependencies {
 
+    testImplementation(libs.mockk)
+    testImplementation(libs.coroutines.test)
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)

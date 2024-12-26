@@ -1,6 +1,4 @@
-package rk.app.datasniffingapp.data.logger
-
-import rk.app.datasniffingapp.domain.logger.UrlLogger
+package rk.app.datasniffingapp.data
 
 // CompositeUrlLogger to aggregate multiple loggers
 class CompositeUrlLogger(private val loggers: List<UrlLogger>) : UrlLogger {

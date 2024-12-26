@@ -3,8 +3,8 @@ package rk.app.datasniffingapp
 import org.junit.Test
 import org.mockito.Mockito.mock
 import org.mockito.Mockito.verify
-import rk.app.datasniffingapp.data.logger.CompositeUrlLogger
-import rk.app.datasniffingapp.domain.logger.UrlLogger
+import rk.app.datasniffingapp.data.CompositeUrlLogger
+import rk.app.datasniffingapp.data.UrlLogger
 
 class CompositeUrlLoggerTest {
 

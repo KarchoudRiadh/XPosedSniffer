@@ -4,7 +4,7 @@ import de.robv.android.xposed.XC_MethodHook
 import de.robv.android.xposed.XposedBridge
 import de.robv.android.xposed.XposedHelpers
 import de.robv.android.xposed.callbacks.XC_LoadPackage
-import rk.app.datasniffingapp.domain.logger.UrlLogger
+import rk.app.datasniffingapp.data.UrlLogger
 
 class VolleyHookStrategy : HookStrategy {
     override fun setupHooks(loadPackageParam: XC_LoadPackage.LoadPackageParam, logger: UrlLogger) {

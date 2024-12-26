@@ -6,7 +6,7 @@ import org.mockito.Mockito.mock
 import org.mockito.Mockito.verify
 import org.mockito.Mockito.`when`
 import rk.app.datasniffingapp.application.hooks.OkHttpHookStrategy
-import rk.app.datasniffingapp.domain.logger.UrlLogger
+import rk.app.datasniffingapp.data.UrlLogger
 
 class OkHttpHookStrategyTest {
 

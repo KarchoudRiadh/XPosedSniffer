@@ -8,11 +8,11 @@ import rk.app.datasniffingapp.application.hooks.HookStrategy
 import rk.app.datasniffingapp.application.hooks.HttpURLConnectionHookStrategy
 import rk.app.datasniffingapp.application.hooks.OkHttpHookStrategy
 import rk.app.datasniffingapp.application.hooks.VolleyHookStrategy
-import rk.app.datasniffingapp.data.logger.CompositeUrlLogger
-import rk.app.datasniffingapp.data.logger.FileExtension
-import rk.app.datasniffingapp.data.logger.FileUrlLogger
-import rk.app.datasniffingapp.data.logger.SQLiteUrlLogger
-import rk.app.datasniffingapp.usecases.HookNetworkCallsUseCase
+import rk.app.datasniffingapp.data.CompositeUrlLogger
+import rk.app.datasniffingapp.data.FileExtension
+import rk.app.datasniffingapp.data.FileUrlLogger
+import rk.app.datasniffingapp.data.SQLiteUrlLogger
+import rk.app.datasniffingapp.domain.HookNetworkCallsUseCase
 import rk.app.datasniffingapp.utils.Constants.FILE_NAME
 import rk.app.datasniffingapp.utils.Constants.TARGET_PACKAGE
 

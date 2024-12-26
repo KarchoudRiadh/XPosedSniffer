@@ -7,7 +7,7 @@ DataSniffingApp is an Android app that hooks into popular network libraries (e.g
 - Intercept network requests made by the target application.
 - Log intercepted URLs into various formats (CSV, TXT, SQLite).
 - Modular architecture following Clean Architecture principles.
-- Supports dependency injection using Dagger Hilt.
+- Supports dependency injection using Dagger Hilt. (In progress)
 
 ## Results in https://github.com/KarchoudRiadh/XPosedSniffer/tree/main/ExtractedFiles
 - In the results folder I put the extracted url files and apk of the module.

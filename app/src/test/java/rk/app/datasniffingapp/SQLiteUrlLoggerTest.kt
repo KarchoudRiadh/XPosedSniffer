@@ -2,7 +2,7 @@ package rk.app.datasniffingapp
 
 import android.database.sqlite.SQLiteDatabase
 import org.junit.Test
-import rk.app.datasniffingapp.data.logger.SQLiteUrlLogger
+import rk.app.datasniffingapp.data.SQLiteUrlLogger
 import java.io.File
 
 class SQLiteUrlLoggerTest {

@@ -1,8 +1,8 @@
 package rk.app.datasniffingapp
 
 import org.junit.Test
-import rk.app.datasniffingapp.data.logger.FileExtension
-import rk.app.datasniffingapp.data.logger.FileUrlLogger
+import rk.app.datasniffingapp.data.FileExtension
+import rk.app.datasniffingapp.data.FileUrlLogger
 import java.io.File
 
 class CsvUrlLoggerTest {

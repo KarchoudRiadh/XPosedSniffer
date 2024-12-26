@@ -1,7 +1,7 @@
 package rk.app.datasniffingapp.application.hooks
 
 import de.robv.android.xposed.callbacks.XC_LoadPackage
-import rk.app.datasniffingapp.domain.logger.UrlLogger
+import rk.app.datasniffingapp.data.UrlLogger
 
 /**
  * Represents a strategy for hooking into specific network request mechanisms

@@ -1,9 +1,8 @@
-package rk.app.datasniffingapp.usecases
+package rk.app.datasniffingapp.domain
 
-import de.robv.android.xposed.XposedBridge
 import de.robv.android.xposed.callbacks.XC_LoadPackage
 import rk.app.datasniffingapp.application.hooks.HookStrategy
-import rk.app.datasniffingapp.domain.logger.UrlLogger
+import rk.app.datasniffingapp.data.UrlLogger
 
 /**
  * Use case to hook into network calls in the target app.
