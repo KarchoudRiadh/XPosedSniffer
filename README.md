@@ -13,6 +13,8 @@ DataSniffingApp is an Android app that hooks into popular network libraries (e.g
 - In the results folder I put the extracted url files and apk of the module.
 - You can also see the screen shots of the results
 
+<img src="https://github.com/KarchoudRiadh/XPosedSniffer/blob/main/ExtractedFiles/Screenshot_Notifs.png">
+<img src="https://github.com/KarchoudRiadh/XPosedSniffer/blob/main/ExtractedFiles/Screenshot_active_module.png">
 <img src="https://github.com/KarchoudRiadh/XPosedSniffer/blob/main/ExtractedFiles/Screenshot_FILE_LOCATION.png">
 <img src="https://raw.githubusercontent.com/KarchoudRiadh/XPosedSniffer/refs/heads/main/ExtractedFiles/Screenshot_TXT.png">
 <img src="https://raw.githubusercontent.com/KarchoudRiadh/XPosedSniffer/refs/heads/main/ExtractedFiles/Screenshot_CSV.png">
