@@ -21,8 +21,9 @@ class OkHttpHookStrategyTest {
 
         // Simulate a hooked method returning a URL
         val url = "http://example.com"
-        logger.logUrl(lpparam.packageName, url)
+        val hookType = "Okhttp"
+        logger.logUrl(lpparam.packageName, url, hookType)
 
-        verify(logger).logUrl("com.example.app", url)
+        verify(logger).logUrl("com.example.app", url, hookType)
     }
 }

@@ -42,9 +42,6 @@ dependencies {
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
-    //compileOnly(libs.android.xposed)
-    //compileOnly ("de.robv.android.xposed:api:82:sources")
-
     compileOnly(
         fileTree(
             mapOf(
@@ -57,9 +54,16 @@ dependencies {
 
     testImplementation(libs.junit)
     testImplementation(libs.mockito.core)
-
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(libs.mockito.kotlin)
+    testCompileOnly(
+        fileTree(
+            mapOf(
+                "dir" to "libs",
+                "include" to listOf("*.aar", "*.jar")
+            )
+        )
+    )
 
 }

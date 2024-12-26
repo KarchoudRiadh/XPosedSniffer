@@ -14,10 +14,11 @@ class SQLiteUrlLoggerTest {
 
         val packageName = "com.example.app"
         val url = "http://example.com"
+        val hookType = "Okhttp"
+        logger.logUrl(packageName, url, hookType)
 
-        logger.logUrl(packageName, url)
-
-        val db = SQLiteDatabase.openDatabase(tempDbFile.absolutePath, null, SQLiteDatabase.OPEN_READONLY)
+        val db =
+            SQLiteDatabase.openDatabase(tempDbFile.absolutePath, null, SQLiteDatabase.OPEN_READONLY)
         val cursor = db.rawQuery("SELECT packageName, url FROM UrlLogs", null)
 
         assert(cursor.moveToFirst())
