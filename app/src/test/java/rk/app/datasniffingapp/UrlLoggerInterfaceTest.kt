@@ -3,7 +3,6 @@ package rk.app.datasniffingapp
 import io.mockk.mockk
 import io.mockk.verify
 import org.junit.Test
-import org.mockito.Mockito.verify
 import rk.app.datasniffingapp.data.CompositeUrlLogger
 import rk.app.datasniffingapp.data.UrlLogger
 
