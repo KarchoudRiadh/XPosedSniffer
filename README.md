@@ -9,12 +9,14 @@ DataSniffingApp is an Android app that hooks into popular network libraries (e.g
 - Modular architecture following Clean Architecture principles.
 - Supports dependency injection using Dagger Hilt.
 
-## Results
+## Results in https://github.com/KarchoudRiadh/XPosedSniffer/tree/main/ExtractedFiles
 - In the results folder I put the extracted url files and apk of the module.
 - You can also see the screen shots of the results
 
+<img src="https://github.com/KarchoudRiadh/XPosedSniffer/blob/main/ExtractedFiles/Screenshot_FILE_LOCATION.png">
 <img src="https://raw.githubusercontent.com/KarchoudRiadh/XPosedSniffer/refs/heads/main/ExtractedFiles/Screenshot_TXT.png">
 <img src="https://raw.githubusercontent.com/KarchoudRiadh/XPosedSniffer/refs/heads/main/ExtractedFiles/Screenshot_CSV.png">
+<img src="https://raw.githubusercontent.com/KarchoudRiadh/XPosedSniffer/refs/heads/main/ExtractedFiles/Screenshot_DB.png">
 
 ## Architecture
 The project is structured using Clean Architecture:
