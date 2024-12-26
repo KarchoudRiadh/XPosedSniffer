@@ -1,4 +1,3 @@
 # Simple sample app that does GET queries using different networking libraries
 
-
-![](xposedtester.png)
+# In extracted files directory you can find an example of the result of the module
