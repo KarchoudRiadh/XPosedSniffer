@@ -46,11 +46,13 @@ class SnifferXposedModule : IXposedHookLoadPackage {
 
         val compositeLogger = CompositeUrlLogger(
             FileExtension.entries.map { fileExtension ->
+                val fullPath =
+                    "${Environment.getDataDirectory().path}/data/${loadPackageParam.packageName}/${FILE_NAME}.${fileExtension.name.lowercase()}"
                 if (fileExtension.name == FileExtension.DB.name) {
-                    SQLiteUrlLogger(databasePath = "${Environment.getDataDirectory().path}/data/${loadPackageParam.packageName}/${FILE_NAME}.${fileExtension.name.lowercase()}")
+                    SQLiteUrlLogger(databasePath = fullPath)
                 } else {
                     FileUrlLogger(
-                        filePath = "${Environment.getDataDirectory().path}/data/${loadPackageParam.packageName}/${FILE_NAME}.${fileExtension.name.lowercase()}",
+                        filePath = fullPath,
                         fileExtension = fileExtension
                     )
                 }

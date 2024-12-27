@@ -17,15 +17,15 @@ class VolleyHookStrategy : HookStrategy {
                 object : XC_MethodHook() {
                     override fun beforeHookedMethod(param: MethodHookParam) {
                         val request = param.args[0]
-                        val url = request.javaClass.getMethod("getUrl").invoke(request)?.toString()
-                        if (url != null) {
-                            XposedBridge.log("[VolleyHookStrategy] Volley request added. URL: $url")
-                            logger.logUrl(
-                                packageName = loadPackageParam.packageName,
-                                url = url,
-                                hookType = javaClass.name
-                            )
-                        }
+                        request.javaClass.getMethod("getUrl").invoke(request)?.toString()
+                            ?.let { url ->
+                                XposedBridge.log("[VolleyHookStrategy] Volley request added. URL: $url")
+                                logger.logUrl(
+                                    packageName = loadPackageParam.packageName,
+                                    url = url,
+                                    hookType = javaClass.name
+                                )
+                            }
                     }
                 }
             )
