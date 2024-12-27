@@ -12,7 +12,7 @@ import org.junit.runner.Request
 import org.mockito.Mockito
 import org.mockito.Mockito.mock
 import org.mockito.Mockito.verify
-import org.mockito.kotlin.whenever
+import org.mockito.Mockito.`when`
 import rk.app.datasniffingapp.application.hooks.VolleyHookStrategy
 import rk.app.datasniffingapp.data.UrlLogger
 
@@ -30,8 +30,8 @@ class VolleyHookStrategyTest {
         volleyHookStrategy = VolleyHookStrategy()
 
         // Mock loadPackageParam properties
-        whenever(mockLoadPackageParam.packageName).thenReturn("com.example.app")
-        whenever(mockLoadPackageParam.classLoader).thenReturn(javaClass.classLoader)
+        `when`(mockLoadPackageParam.packageName).thenReturn("com.example.app")
+        `when`(mockLoadPackageParam.classLoader).thenReturn(javaClass.classLoader)
     }
 
     @Test
@@ -65,12 +65,12 @@ class VolleyHookStrategyTest {
     fun `test beforeHookedMethod logs URL`() {
         // Prepare a mock Volley Request and simulate the "getUrl" method
         val url = "http://example.com"
-        whenever(mockRequest.javaClass.getMethod("getUrl")).thenReturn(mockMethod("getUrl"))
-        whenever(mockRequest.javaClass.getMethod("getUrl").invoke(mockRequest)).thenReturn(url)
+        `when`(mockRequest.javaClass.getMethod("getUrl")).thenReturn(mockMethod("getUrl"))
+        `when`(mockRequest.javaClass.getMethod("getUrl").invoke(mockRequest)).thenReturn(url)
 
         // Simulate calling beforeHookedMethod
         val mockMethodHookParam = mock<XC_MethodHook.MethodHookParam>()
-        whenever(mockMethodHookParam.args).thenReturn(arrayOf(mockRequest))
+        `when`(mockMethodHookParam.args).thenReturn(arrayOf(mockRequest))
 
         // Call setupHooks first to set up the hook
         volleyHookStrategy.setupHooks(mockLoadPackageParam, mockUrlLogger)

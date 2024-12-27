@@ -9,6 +9,7 @@ import org.junit.jupiter.api.Test
 import org.mockito.Mockito
 import org.mockito.Mockito.mock
 import org.mockito.Mockito.verify
+import org.mockito.Mockito.`when`
 import rk.app.datasniffingapp.application.hooks.HttpURLConnectionHookStrategy
 import rk.app.datasniffingapp.data.UrlLogger
 import java.net.URL
@@ -25,8 +26,8 @@ class HttpURLConnectionHookStrategyTest {
         httpURLConnectionHookStrategy = HttpURLConnectionHookStrategy()
 
         // Mock loadPackageParam properties
-        whenever(mockLoadPackageParam.packageName).thenReturn("com.example.app")
-        whenever(mockLoadPackageParam.classLoader).thenReturn(javaClass.classLoader)
+        `when`(mockLoadPackageParam.packageName).thenReturn("com.example.app")
+        `when`(mockLoadPackageParam.classLoader).thenReturn(javaClass.classLoader)
     }
 
     @Test
@@ -67,12 +68,13 @@ class HttpURLConnectionHookStrategyTest {
     @Test
     fun `test setupHooks failure`() {
         // Simulate an error in the hook setup (e.g., method not found)
-        Mockito.doThrow(Throwable("Method not found")).`when`(XposedHelpers::class.java).findAndHookMethod(
-            "java.net.URL",
-            mockLoadPackageParam.classLoader,
-            "openConnection",
-            Mockito.any(XC_MethodHook::class.java)
-        )
+        Mockito.doThrow(Throwable("Method not found")).`when`(XposedHelpers::class.java)
+            .findAndHookMethod(
+                "java.net.URL",
+                mockLoadPackageParam.classLoader,
+                "openConnection",
+                Mockito.any(XC_MethodHook::class.java)
+            )
 
         // Call setupHooks
         httpURLConnectionHookStrategy.setupHooks(mockLoadPackageParam, mockUrlLogger)
@@ -85,7 +87,7 @@ class HttpURLConnectionHookStrategyTest {
     fun `test afterHookedMethod logs URL`() {
         // Simulate an invocation of afterHookedMethod with mock params
         val mockMethodHookParam = mock<XC_MethodHook.MethodHookParam>()
-        whenever(mockMethodHookParam.thisObject).thenReturn(URL("http://example.com"))
+        `when`(mockMethodHookParam.thisObject).thenReturn(URL("http://example.com"))
 
         // Call the afterHookedMethod directly
         httpURLConnectionHookStrategy.setupHooks(mockLoadPackageParam, mockUrlLogger)
