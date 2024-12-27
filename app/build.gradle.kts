@@ -37,8 +37,6 @@ android {
 
 dependencies {
 
-    testImplementation(libs.mockk)
-    testImplementation(libs.coroutines.test)
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
@@ -51,7 +49,12 @@ dependencies {
         )
     )
 
-
+    testImplementation(libs.volley)
+    testImplementation(libs.mockk)
+    testImplementation(libs.coroutines.test)
+    testImplementation(libs.junit.jupiter.api)
+    testImplementation(libs.junit.jupiter.engine)
+    testImplementation(libs.kotlin.test)
     testImplementation(libs.junit)
     testImplementation(libs.mockito.core)
     androidTestImplementation(libs.androidx.junit)
